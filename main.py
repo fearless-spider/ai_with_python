@@ -8,6 +8,18 @@ input_data = np.array(
      [7.3, -9.9, -4.5]]
 )
 
-# Binarize data
+# Binarize data - convert numerical values into boolean values
 data_binarized = preprocessing.Binarizer(threshold=2.1).transform(input_data)
 print("\nBinarized data:\n", data_binarized)
+
+# Mean removal - to center feature on zero bbby removing bias
+
+print("\nBEFORE:")
+print("Mean =", input_data.mean(axis=0))
+print("Std deviation =", input_data.std(axis=0))
+
+# Remove mean
+data_scaled = preprocessing.scale(input_data)
+print("\nAFTER:")
+print("Mean =", data_scaled.mean(axis=0))
+print("Std deviation =", data_scaled.std(axis=0))
