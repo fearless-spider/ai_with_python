@@ -36,6 +36,7 @@ pip_install 'h5py' h5py
 pip_install 'ipython' ipython
 pip_install 'jupyter' jupyter
 pip_install 'scikit-learn' scikit-learn
-install 'matplotlib' matplotlib
+pip_install 'neurolab' neurolab
+pip_install 'matplotlib' matplotlib
 
 echo 'All set!'
